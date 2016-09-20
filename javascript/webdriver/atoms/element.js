@@ -120,11 +120,7 @@ webdriver.atoms.element.isInHead_ = function(element) {
  * @return {string} The visible text or an empty string.
  */
 webdriver.atoms.element.getText = function(element, opt_inComposedDom) {
-  if (!!opt_inComposedDom) {
-    return bot.dom.getVisibleTextInComposedDom(element);
-  } else {
-    return bot.dom.getVisibleText(element);
-  }
+  return element.innerText;
 };
 
 
